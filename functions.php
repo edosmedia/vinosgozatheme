@@ -12,6 +12,34 @@ if ( ! defined( '_S_VERSION' ) ) {
 	define( '_S_VERSION', '1.0.0' );
 }
 
+
+// Registra los archivos CSS de Bootstrap
+function register_bootstrap() {
+    wp_register_style('bootstrap', 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css', array(), '5.3.0', 'all');
+}
+
+// Enlaza los archivos CSS de Bootstrap
+function enqueue_bootstrap() {
+    wp_enqueue_style('bootstrap');
+}
+
+// Registra los archivos JS de Bootstrap
+function register_scripts() {
+    wp_register_script('popper', 'https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js', array('jquery'), '2.11.6', true, 10);
+    wp_register_script('bootstrap', 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js', array('jquery', 'popper'), '5.3.0', true, 10);
+}
+
+// Enlaza los archivos JS de Bootstrap
+function enqueue_scripts() {
+    wp_enqueue_script('popper');
+    wp_enqueue_script('bootstrap');
+}
+
+add_action('wp_enqueue_scripts', 'register_bootstrap', 100);
+add_action('wp_enqueue_scripts', 'enqueue_bootstrap', 1000);
+add_action('wp_enqueue_scripts', 'register_scripts', 1000);
+add_action('wp_enqueue_scripts', 'enqueue_scripts', 100);
+
 /**
  * Sets up theme defaults and registers support for various WordPress features.
  *
