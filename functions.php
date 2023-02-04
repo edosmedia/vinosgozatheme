@@ -7,15 +7,35 @@
  * @package vinosgoza
  */
 
+
+add_filter( 'template_include', 'include_navwalker', 1 );
+
+function include_navwalker( $template ) {
+    require_once get_template_directory() . '/assets/recurses/wp-bootstrap-navwalker/class-wp-bootstrap-navwalker.php';
+    return $template;
+}
+
 if ( ! defined( '_S_VERSION' ) ) {
 	// Replace the version number of the theme on each release.
 	define( '_S_VERSION', '1.0.0' );
 }
 
+  function register_my_menu() {
+    register_nav_menu('menu-1',__( 'menu-1' ));
+  }
+  add_action( 'init', 'register_my_menu' );
+
+  // Añadir una clase CSS a los elementos li
+  function add_classes_to_wp_nav_menu($classes) {
+    $classes[] = 'nav-item';
+    return $classes;
+  }
+  add_filter('nav_menu_css_class', 'add_classes_to_wp_nav_menu');
+
 
 // Registra los archivos CSS de Bootstrap
 function register_bootstrap() {
-    wp_register_style('bootstrap', 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css', array(), '5.3.0', 'all');
+    wp_register_style('bootstrap', 'https://cdn.jsdelivr.net/npm/bootswatch@5.2.3/dist/lux/bootstrap.min.css', array(), '5.3.0', 'all');
 }
 
 // Enlaza los archivos CSS de Bootstrap
@@ -35,7 +55,7 @@ function enqueue_scripts() {
     wp_enqueue_script('bootstrap');
 }
 
-add_action('wp_enqueue_scripts', 'register_bootstrap', 100);
+add_action('wp_enqueue_scripts', 'register_bootstrap');
 add_action('wp_enqueue_scripts', 'enqueue_bootstrap', 1000);
 add_action('wp_enqueue_scripts', 'register_scripts', 1000);
 add_action('wp_enqueue_scripts', 'enqueue_scripts', 100);
