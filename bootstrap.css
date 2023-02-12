@@ -98,7 +98,11 @@
 /* main {
   height: calc(100vh - 329px);
 } */
-
+#jumbo {
+  background-image: url('https://vinosgoza.com/wp-content/themes/vinoszona/assets/images/jumbotron.png') !important;
+  height: 100%;
+  width: 100vw;
+}
 .vg-footer {
   background-color: var(--vg-footer-bg);
 }
