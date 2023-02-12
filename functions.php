@@ -74,7 +74,7 @@ function vinoszona_setup() {
 		apply_filters(
 			'vinoszona_custom_background_args',
 			array(
-				'default-color' => '000',
+				'default-color' => 'ffffff',
 				'default-image' => '',
 			)
 		)
@@ -137,7 +137,7 @@ add_action( 'widgets_init', 'vinoszona_widgets_init' );
  */
 function vinoszona_scripts() {
 	wp_enqueue_style( 'vinoszona-style', get_stylesheet_uri(), array() );
-	// wp_style_add_data( 'vinoszona-style', 'rtl', 'replace' );
+	wp_style_add_data( 'vinoszona-style', 'rtl', 'replace' );
 
 	wp_enqueue_script( 'vinoszona-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
 
@@ -181,6 +181,13 @@ if ( class_exists( 'WooCommerce' ) ) {
 	require get_template_directory() . '/inc/woocommerce.php';
 }
 
+add_filter( 'template_include', 'include_navwalker', 1 );
+
+function include_navwalker( $template ) {
+    require_once get_template_directory() . '/assets/recurses/wp-bootstrap-navwalker/class-wp-bootstrap-navwalker.php';
+    return $template;
+}
+
 if ( ! defined( '_S_VERSION' ) ) {
 	// Replace the version number of the theme on each release.
 	define( '_S_VERSION', '1.0.0' );
@@ -197,3 +204,34 @@ if ( ! defined( '_S_VERSION' ) ) {
     return $classes;
   }
   add_filter('nav_menu_css_class', 'add_classes_to_wp_nav_menu');
+
+
+// Registra los archivos CSS de Bootstrap
+function bootstrap_css() {
+//     wp_register_style('bootstrap', '/bootstrap.css');
+wp_enqueue_style( 'bootstrap_css',  get_stylesheet_directory_uri() . '/assets/bootstrap/bootstrap.css', array(), '1.0' );
+}
+
+add_action('wp_enqueue_scripts', 'bootstrap_css');
+
+// Enlaza los archivos CSS de Bootstrap
+function enqueue_bootstrap() {
+    wp_enqueue_style('bootstrap');
+}
+
+// Registra los archivos JS de Bootstrap
+function register_scripts() {
+    wp_register_script('popper', 'https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js', array('jquery'), '2.11.6', true, 10);
+    wp_register_script('bootstrap', 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js', array('jquery', 'popper'), '5.3.0', true, 10);
+}
+
+// Enlaza los archivos JS de Bootstrap
+function enqueue_scripts() {
+    wp_enqueue_script('popper');
+    wp_enqueue_script('bootstrap');
+}
+
+add_action('wp_enqueue_style', 'register_bootstrap');
+add_action('wp_enqueue_scripts', 'enqueue_bootstrap');
+add_action('wp_enqueue_scripts', 'register_scripts');
+add_action('wp_enqueue_scripts', 'enqueue_scripts');
