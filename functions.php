@@ -129,6 +129,17 @@ function vinoszona_widgets_init() {
 			'after_title'   => '</h2>',
 		)
 	);
+	register_sidebar(
+		array(
+			'name'          => esc_html__( 'Footer', 'vinoszona' ),
+			'id'            => 'footer',
+			'description'   => esc_html__( 'Añadir widgets aquí.', 'vinoszona' ),
+			'before_widget' => '<section id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</section>',
+			'before_title'  => '<h2 class="widget-title">',
+			'after_title'   => '</h2>',
+		)
+	);
 }
 add_action( 'widgets_init', 'vinoszona_widgets_init' );
 
@@ -231,6 +242,7 @@ function enqueue_scripts() {
     wp_enqueue_script('popper');
     wp_enqueue_script('bootstrap');
 }
+
 
 add_action('wp_enqueue_scripts', 'register_scripts');
 add_action('wp_enqueue_scripts', 'enqueue_scripts');
