@@ -131,8 +131,8 @@
 }
 
 #jumbo .vg-text-dorado-jumbo {
-  color: #CD916D;
-  font-size: 1.875vw;
+  color: #CD916D !important;
+  font-size: 1.892vw !important;
 
 }
 .vg-footer {
