@@ -74,7 +74,7 @@ function vinoszona_setup() {
 		apply_filters(
 			'vinoszona_custom_background_args',
 			array(
-				'default-color' => 'ffffff',
+				'default-color' => '000',
 				'default-image' => '',
 			)
 		)
