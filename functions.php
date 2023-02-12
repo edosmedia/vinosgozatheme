@@ -207,9 +207,9 @@ if ( ! defined( '_S_VERSION' ) ) {
 
 
 // Registra los archivos CSS de Bootstrap
-function register_bootstrap() {
-    wp_register_style('bootstrap', 'https://cdn.jsdelivr.net/npm/bootswatch@5.2.3/dist/lux/bootstrap.min.css', array(), '5.3.0', 'all');
-}
+// function register_bootstrap() {
+//     wp_register_style('bootstrap', 'https://cdn.jsdelivr.net/npm/bootswatch@5.2.3/dist/lux/bootstrap.min.css', array(), '5.3.0', 'all');
+// }
 
 // Enlaza los archivos CSS de Bootstrap
 function enqueue_bootstrap() {
@@ -228,7 +228,7 @@ function enqueue_scripts() {
     wp_enqueue_script('bootstrap');
 }
 
-add_action('wp_enqueue_scripts', 'register_bootstrap');
+// add_action('wp_enqueue_scripts', 'register_bootstrap');
 add_action('wp_enqueue_scripts', 'enqueue_bootstrap');
 add_action('wp_enqueue_scripts', 'register_scripts');
 add_action('wp_enqueue_scripts', 'enqueue_scripts');
