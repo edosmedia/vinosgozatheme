@@ -130,7 +130,7 @@
   width: 100%;
   height: 100%;
 }
-.vg-big-primary-btn {
+button.vg-big-primary-btn {
   background-color: #C19372;
     color: #fff !important;
     font-size: 21px;
