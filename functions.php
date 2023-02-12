@@ -216,9 +216,9 @@ if ( ! defined( '_S_VERSION' ) ) {
 // add_action('wp_enqueue_scripts', 'bootstrap_css');
 
 // Enlaza los archivos CSS de Bootstrap
-function enqueue_bootstrap() {
-    wp_enqueue_style('bootstrap');
-}
+// function enqueue_bootstrap() {
+//     wp_enqueue_style('bootstrap');
+// }
 
 // Registra los archivos JS de Bootstrap
 function register_scripts() {
@@ -233,6 +233,5 @@ function enqueue_scripts() {
 }
 
 add_action('wp_enqueue_style', 'register_bootstrap');
-add_action('wp_enqueue_scripts', 'enqueue_bootstrap');
 add_action('wp_enqueue_scripts', 'register_scripts');
 add_action('wp_enqueue_scripts', 'enqueue_scripts');
