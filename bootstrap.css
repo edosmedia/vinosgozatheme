@@ -108,7 +108,15 @@
     z-index: 99;
     width: 100%;
 }
+#jumbo {
+  position: relative;
+}
 #jumbo:before {
+  content: " ";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
   background-image: url('https://vinosgoza.com/wp-content/themes/vinoszona/assets/images/jumbotron.png') !important;
   max-height: 923px;
   background-size: cover;
@@ -116,6 +124,8 @@
   background-repeat: no-repeat;
   background-position: center center;
   opacity: 0.6;
+    width: 100%;
+  height: 100%;
 }
 .vg-footer {
   background-color: var(--vg-footer-bg);
