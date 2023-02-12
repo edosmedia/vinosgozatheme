@@ -209,7 +209,7 @@ if ( ! defined( '_S_VERSION' ) ) {
 // Registra los archivos CSS de Bootstrap
 function bootstrap_css() {
 //     wp_register_style('bootstrap', '/bootstrap.css');
-wp_enqueue_style( 'bootstrap_css',  get_stylesheet_directory_uri() . '/assets/bootstrap/bootstrap.css' );
+wp_enqueue_style( 'bootstrap_css',  get_stylesheet_directory_uri() . '/bootstrap.css' );
 }
 
 add_action('wp_enqueue_scripts', 'bootstrap_css');
