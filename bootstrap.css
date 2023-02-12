@@ -131,12 +131,14 @@
   height: 100%;
 }
 .vg-big-primary-btn > button {
+  font-family: 'Bebas Neue', cursive !important;
   background-color: #C19372 !important;
-    color: #fff !important;
-    font-size: 21px !important;
-    outline: 1px solid white !important;
-    outline-offset: -6px;
-    padding: 16px 40px !important;
+  color: #fff !important;
+  font-size: 21px !important;
+  outline: 1px solid white !important;
+  outline-offset: -6px;
+  padding-top: 16px !important;
+  padding-bottom: 16px !important;
 }
 .vg-text-dorado-jumbo {
   color: #CD916D !important;
