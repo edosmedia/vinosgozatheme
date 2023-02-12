@@ -134,9 +134,9 @@
   background-color: #C19372 !important;
     color: #fff !important;
     font-size: 21px !important;
-    outline: 1px solid #fff;
+    outline: 1px solid white !important;
     outline-offset: -6px;
-    padding: 16px 40px;
+    padding: 16px 40px !important;
 }
 .vg-text-dorado-jumbo {
   color: #CD916D !important;
