@@ -145,6 +145,11 @@
   font-size: 1.892vw !important;
 
 }
+
+.vg-bg-deg {
+ background: rgb(2,0,36);
+background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(215,171,114,1) 0%, rgba(164,110,80,1) 100%);
+}
 .vg-text-call-jumbo  {
   font-family: 'Libre Baskerville', serif !important;
   font-size: 2.733vw !important;
