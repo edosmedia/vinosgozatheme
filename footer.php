@@ -8,18 +8,16 @@
  *
  * @package vinosgoza
  */
-if ( ! is_active_sidebar( 'footer' ) ) {
-	return;
-}
-?>
 
 ?>
 
-	<footer id="colophon" class="site-footer">
+
+	<footer id="colophon" class="site-footer vg-footer">
+
+		<div class="site-info container">
 		<aside id="secondary" class="widget-area">
 		<?php dynamic_sidebar( 'footer' ); ?>
 		</aside>
-		<div class="site-info container">
 			<a href="<?php echo esc_url( __( 'https://vinosgoza', 'vinoszona' ) ); ?>">
 				<?php
 				/* translators: %s: CMS name, i.e. WordPress. */

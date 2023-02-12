@@ -80,6 +80,7 @@
   --bs-link-hover-color: #151515;
   --bs-code-color: #e83e8c;
   --bs-highlight-bg: #fcefdc;
+  --vg-footer-bg: #222222;
 }
 
 *,
@@ -92,6 +93,20 @@
   :root {
     scroll-behavior: smooth;
   }
+}
+
+main {
+  height: calc(100vh - 361px);
+}
+
+.vg-footer {
+  background-color: var(--vg-footer-bg);
+}
+.site-info {
+  padding: 48px 0px 117px 0px;
+}
+.vg-footer .widget_block li {
+ list-style: none;
 }
 
 body {
