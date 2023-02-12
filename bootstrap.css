@@ -95,9 +95,9 @@
   }
 }
 
-main {
+/* main {
   height: calc(100vh - 329px);
-}
+} */
 
 .vg-footer {
   background-color: var(--vg-footer-bg);
