@@ -56,9 +56,9 @@ function enqueue_scripts() {
 }
 
 add_action('wp_enqueue_scripts', 'register_bootstrap');
-add_action('wp_enqueue_scripts', 'enqueue_bootstrap', 1000);
-add_action('wp_enqueue_scripts', 'register_scripts', 1000);
-add_action('wp_enqueue_scripts', 'enqueue_scripts', 100);
+add_action('wp_enqueue_scripts', 'enqueue_bootstrap', 1);
+add_action('wp_enqueue_scripts', 'register_scripts', 1);
+add_action('wp_enqueue_scripts', 'enqueue_scripts', 1);
 
 /**
  * Sets up theme defaults and registers support for various WordPress features.

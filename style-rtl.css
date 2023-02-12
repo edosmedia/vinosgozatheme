@@ -471,9 +471,13 @@ big {
 
 /* Elements
 --------------------------------------------- */
-body {
-	background: #fff;
+:root {
+	color-scheme: dark !important
 }
+body {
+	background-color: #000 !important;
+}
+
 
 hr {
 	background-color: #ccc;
