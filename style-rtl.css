@@ -78,9 +78,9 @@ html {
  * Remove the margin in all browsers.
  */
 body {
+	background-color: #000 !important;
 	margin: 0;
 }
-
 /**
  * Render the `main` element consistently in IE.
  */
@@ -471,12 +471,6 @@ big {
 
 /* Elements
 --------------------------------------------- */
-:root {
-	color-scheme: dark !important
-}
-body {
-	background-color: #000 !important;
-}
 
 
 hr {

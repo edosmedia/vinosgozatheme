@@ -8,57 +8,7 @@
  */
 
 
-add_filter( 'template_include', 'include_navwalker', 1 );
 
-function include_navwalker( $template ) {
-    require_once get_template_directory() . '/assets/recurses/wp-bootstrap-navwalker/class-wp-bootstrap-navwalker.php';
-    return $template;
-}
-
-if ( ! defined( '_S_VERSION' ) ) {
-	// Replace the version number of the theme on each release.
-	define( '_S_VERSION', '1.0.0' );
-}
-
-  function register_my_menu() {
-    register_nav_menu('menu-1',__( 'menu-1' ));
-  }
-  add_action( 'init', 'register_my_menu' );
-
-  // Añadir una clase CSS a los elementos li
-  function add_classes_to_wp_nav_menu($classes) {
-    $classes[] = 'nav-item';
-    return $classes;
-  }
-  add_filter('nav_menu_css_class', 'add_classes_to_wp_nav_menu');
-
-
-// Registra los archivos CSS de Bootstrap
-function register_bootstrap() {
-    wp_register_style('bootstrap', 'https://cdn.jsdelivr.net/npm/bootswatch@5.2.3/dist/lux/bootstrap.min.css', array(), '5.3.0', 'all');
-}
-
-// Enlaza los archivos CSS de Bootstrap
-function enqueue_bootstrap() {
-    wp_enqueue_style('bootstrap');
-}
-
-// Registra los archivos JS de Bootstrap
-function register_scripts() {
-    wp_register_script('popper', 'https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js', array('jquery'), '2.11.6', true, 10);
-    wp_register_script('bootstrap', 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js', array('jquery', 'popper'), '5.3.0', true, 10);
-}
-
-// Enlaza los archivos JS de Bootstrap
-function enqueue_scripts() {
-    wp_enqueue_script('popper');
-    wp_enqueue_script('bootstrap');
-}
-
-add_action('wp_enqueue_scripts', 'register_bootstrap');
-add_action('wp_enqueue_scripts', 'enqueue_bootstrap', 1);
-add_action('wp_enqueue_scripts', 'register_scripts', 1);
-add_action('wp_enqueue_scripts', 'enqueue_scripts', 1);
 
 /**
  * Sets up theme defaults and registers support for various WordPress features.
@@ -230,3 +180,55 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 if ( class_exists( 'WooCommerce' ) ) {
 	require get_template_directory() . '/inc/woocommerce.php';
 }
+
+add_filter( 'template_include', 'include_navwalker', 1 );
+
+function include_navwalker( $template ) {
+    require_once get_template_directory() . '/assets/recurses/wp-bootstrap-navwalker/class-wp-bootstrap-navwalker.php';
+    return $template;
+}
+
+if ( ! defined( '_S_VERSION' ) ) {
+	// Replace the version number of the theme on each release.
+	define( '_S_VERSION', '1.0.0' );
+}
+
+  function register_my_menu() {
+    register_nav_menu('menu-1',__( 'menu-1' ));
+  }
+  add_action( 'init', 'register_my_menu' );
+
+  // Añadir una clase CSS a los elementos li
+  function add_classes_to_wp_nav_menu($classes) {
+    $classes[] = 'nav-item';
+    return $classes;
+  }
+  add_filter('nav_menu_css_class', 'add_classes_to_wp_nav_menu');
+
+
+// Registra los archivos CSS de Bootstrap
+function register_bootstrap() {
+    wp_register_style('bootstrap', 'https://cdn.jsdelivr.net/npm/bootswatch@5.2.3/dist/lux/bootstrap.min.css', array(), '5.3.0', 'all');
+}
+
+// Enlaza los archivos CSS de Bootstrap
+function enqueue_bootstrap() {
+    wp_enqueue_style('bootstrap');
+}
+
+// Registra los archivos JS de Bootstrap
+function register_scripts() {
+    wp_register_script('popper', 'https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js', array('jquery'), '2.11.6', true, 10);
+    wp_register_script('bootstrap', 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js', array('jquery', 'popper'), '5.3.0', true, 10);
+}
+
+// Enlaza los archivos JS de Bootstrap
+function enqueue_scripts() {
+    wp_enqueue_script('popper');
+    wp_enqueue_script('bootstrap');
+}
+
+add_action('wp_enqueue_scripts', 'register_bootstrap');
+add_action('wp_enqueue_scripts', 'enqueue_bootstrap');
+add_action('wp_enqueue_scripts', 'register_scripts');
+add_action('wp_enqueue_scripts', 'enqueue_scripts');
