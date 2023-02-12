@@ -130,11 +130,11 @@
   width: 100%;
   height: 100%;
 }
-button.vg-big-primary-btn {
-  background-color: #C19372;
+.vg-big-primary-btn > button {
+  background-color: #C19372 !important;
     color: #fff !important;
-    font-size: 21px;
-    outline: 1px solid silver;
+    font-size: 21px !important;
+    outline: 1px solid #fff;
     outline-offset: -6px;
     padding: 16px 40px;
 }
