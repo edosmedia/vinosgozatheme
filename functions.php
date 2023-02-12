@@ -232,6 +232,5 @@ function enqueue_scripts() {
     wp_enqueue_script('bootstrap');
 }
 
-add_action('wp_enqueue_style', 'register_bootstrap');
 add_action('wp_enqueue_scripts', 'register_scripts');
 add_action('wp_enqueue_scripts', 'enqueue_scripts');
