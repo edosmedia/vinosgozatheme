@@ -110,7 +110,6 @@
 }
 #jumbo:before {
   background-image: url('https://vinosgoza.com/wp-content/themes/vinoszona/assets/images/jumbotron.png') !important;
-  height: 100vh;
   max-height: 923px;
   background-size: cover;
   height: 923px;
