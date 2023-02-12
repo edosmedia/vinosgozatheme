@@ -136,8 +136,9 @@ add_action( 'widgets_init', 'vinoszona_widgets_init' );
  * Enqueue scripts and styles.
  */
 function vinoszona_scripts() {
+	wp_enqueue_style( 'bootstrap_css',  get_stylesheet_directory_uri() . '/bootstrap.css' );
 	wp_enqueue_style( 'vinoszona-style', get_stylesheet_uri(), array() );
-	wp_style_add_data( 'vinoszona-style', 'rtl', 'replace' );
+	// wp_style_add_data( 'vinoszona-style', 'rtl', 'replace' );
 
 	wp_enqueue_script( 'vinoszona-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
 
@@ -207,12 +208,12 @@ if ( ! defined( '_S_VERSION' ) ) {
 
 
 // Registra los archivos CSS de Bootstrap
-function bootstrap_css() {
-//     wp_register_style('bootstrap', '/bootstrap.css');
-wp_enqueue_style( 'bootstrap_css',  get_stylesheet_directory_uri() . '/bootstrap.css' );
-}
+// function bootstrap_css() {
+// //     wp_register_style('bootstrap', '/bootstrap.css');
+// wp_enqueue_style( 'bootstrap_css',  get_stylesheet_directory_uri() . '/bootstrap.css' );
+// }
 
-add_action('wp_enqueue_scripts', 'bootstrap_css');
+// add_action('wp_enqueue_scripts', 'bootstrap_css');
 
 // Enlaza los archivos CSS de Bootstrap
 function enqueue_bootstrap() {
