@@ -103,6 +103,11 @@
   margin-top: 0 !important;
 }
 
+#header {
+    position: absolute;
+    z-index: 99;
+    width: 100%;
+}
 #jumbo:before {
   background-image: url('https://vinosgoza.com/wp-content/themes/vinoszona/assets/images/jumbotron.png') !important;
   height: 100vh;
