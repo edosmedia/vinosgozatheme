@@ -100,8 +100,7 @@
 } */
 #jumbo {
   background-image: url('https://vinosgoza.com/wp-content/themes/vinoszona/assets/images/jumbotron.png') !important;
-  height: 100%;
-  width: 100vw;
+  height: ;
 }
 .vg-footer {
   background-color: var(--vg-footer-bg);
