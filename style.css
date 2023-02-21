@@ -563,7 +563,7 @@ a:focus {
 a:hover,
 a:active {
 	color: #CB9D6A !important;
-	font-weight: bold;
+	/* font-weight: bold; */
 	outline: 0;
 }
 

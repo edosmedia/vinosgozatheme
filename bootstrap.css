@@ -125,6 +125,7 @@
   position: relative;
   font-family: 'Bebas Neue', cursive;
   padding-top: 100px;
+  width: 100% !important;
 }
 #jumbo:before {
   content: " ";
@@ -132,13 +133,13 @@
   position: absolute;
   left: 0;
   top: 0;
-  background-image: url('https://vinosgoza.com/wp-content/themes/vinoszona/assets/images/jumbotron.png') !important;
+  background-image: url('https://vinosgoza.com/wp-content/themes/vinoszona/assets/images/jumbotron.jpg') !important;
   max-height: 923px;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
   opacity: 0.5;
-  width: 100%;
+  width: inherit;
   height: 100%;
 }
 .vg-big-primary-btn > button {
