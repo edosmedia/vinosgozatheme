@@ -109,6 +109,10 @@
     position: absolute;
     z-index: 99;
     width: 100%;
+    backdrop-filter: blur(40px);
+    -webkit-backdrop-filter: blur(40px);
+    -moz-backdrop-filter: blur(40px);
+    -o-backdrop-filter: blur(40px);
 }
 #jumbo {
   position: relative;
@@ -137,8 +141,8 @@
   font-size: 21px !important;
   outline: 1px solid white !important;
   outline-offset: -6px;
-  padding-top: 16px !important;
-  padding-bottom: 16px !important;
+  padding-top: 17px !important;
+  padding-bottom: 17px !important;
 }
 .vg-text-dorado-jumbo {
   color: #CD916D !important;
@@ -147,7 +151,7 @@
 }
 
 .vg-bg-deg {
- background: rgb(2,0,36);
+background: rgb(2,0,36);
 background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(215,171,114,1) 0%, rgba(164,110,80,1) 100%);
 }
 .vg-text-call-jumbo  {

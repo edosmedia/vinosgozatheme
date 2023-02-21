@@ -31,7 +31,7 @@
         <header id="header">
             <nav class="navbar navbar-expand-lg navbar-dark ">
                     <div class="container">
-                              <a class="navbar-brand" href="#">Vinos Goza</a>
+                              <a class="navbar-brand" href="#"><img class="logo" src="<?php echo get_template_directory_uri().'/assets/images/logo-goza.svg'; ?>"> </a>
                               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                                         <span class="navbar-toggler-icon"></span>
                               </button>

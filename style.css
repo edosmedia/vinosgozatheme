@@ -70,7 +70,11 @@ html {
 	line-height: 1.15;
 	-webkit-text-size-adjust: 100%;
 }
-
+.navbar-brand  .logo {
+	width: 12vw;
+	filter: brightness(0) invert(1)!important;
+	-webkit-filter: brightness(0) invert(1)!important;
+}
 .navbar-toggler-icon {
 	fill: #CB9D6A !important;
 }
