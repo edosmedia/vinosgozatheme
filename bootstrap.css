@@ -125,6 +125,7 @@
   position: relative;
   font-family: 'Bebas Neue', cursive;
   padding-top: 100px;
+  background-size: cover;
   width: 100% !important;
 }
 #jumbo:before {
@@ -151,6 +152,7 @@
   outline-offset: -6px;
   padding-top: 17px !important;
   padding-bottom: 17px !important;
+  margin: 0 !important;
 }
 .vg-text-dorado-jumbo {
   color: #CD916D !important;
