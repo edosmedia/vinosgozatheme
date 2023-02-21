@@ -143,6 +143,10 @@
   width: inherit;
   height: 100%;
 }
+
+.vg-big-primary-btn {
+    margin: 0 !important;
+}
 .vg-big-primary-btn > button {
   font-family: 'Bebas Neue', cursive !important;
   background-color: #C19372 !important;
@@ -152,7 +156,7 @@
   outline-offset: -6px;
   padding-top: 17px !important;
   padding-bottom: 17px !important;
-  margin: 0 !important;
+
 }
 .vg-text-dorado-jumbo {
   color: #CD916D !important;
