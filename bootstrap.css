@@ -60,7 +60,8 @@
   --bs-body-color-rgb: 85, 89, 92;
   --bs-body-bg-rgb: 255, 255, 255;
   --bs-font-sans-serif: 'Libre Franklin', sans-serif !important;
-  --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  --bs-font-monospace: 'Libre Franklin',
+    sans-serif !important;
   --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
   --bs-body-font-family: var(--bs-font-sans-serif);
   --bs-body-font-size: 1rem;
