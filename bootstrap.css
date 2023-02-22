@@ -59,7 +59,7 @@
   --bs-black-rgb: 0, 0, 0;
   --bs-body-color-rgb: 85, 89, 92;
   --bs-body-bg-rgb: 255, 255, 255;
-  --bs-font-sans-serif: 'Libre Franklin', sans-serif;
+  --bs-font-sans-serif: 'Libre Franklin', sans-serif !important;
   --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
   --bs-body-font-family: var(--bs-font-sans-serif);
@@ -186,7 +186,7 @@ background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(215,171,114,1) 0%, r
 
 body {
   margin: 0;
-  font-family: var(--bs-body-font-family);
+  font-family: var(--bs-body-font-family) !important;
   font-size: var(--bs-body-font-size);
   font-weight: var(--bs-body-font-weight);
   line-height: var(--bs-body-line-height);
