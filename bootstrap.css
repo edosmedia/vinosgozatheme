@@ -172,7 +172,7 @@ background: rgb(2,0,36);
 background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(215,171,114,1) 0%, rgba(164,110,80,1) 100%);
 }
 .vg-text-call-jumbo  {
-  font-family: 'Libre Baskerville', serif !important;
+  font-family: 'Libre Franklin', sans-serif;
   font-size: 2.733vw !important;
 }
 .vg-footer {
@@ -3835,7 +3835,10 @@ textarea.form-control-lg {
 .navbar-brand:hover, .navbar-brand:focus {
   color: var(--bs-navbar-brand-hover-color);
 }
-
+#primary-menu {
+  font-family: 'Bebas Neue', cursive;
+  font-size: 1rem;
+}
 .navbar-nav {
   --bs-nav-link-padding-x: 0;
   --bs-nav-link-padding-y: 0.5rem;
