@@ -151,7 +151,7 @@ main {
     margin: 0 !important;
   
 }
-.vg-big-primary-btn > button {
+.vg-big-primary-btn > a {
   font-family: 'Bebas Neue', cursive !important;
   background-color: #C19372 !important;
   color: #fff !important;
