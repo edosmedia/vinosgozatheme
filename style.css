@@ -659,6 +659,9 @@ textarea {
 
 /* Navigation
 --------------------------------------------- */
+.menu-nav {
+	justify-content: end;
+}
 .main-navigation {
 	display: block;
 	width: 100%;
