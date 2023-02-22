@@ -3815,6 +3815,12 @@ textarea.form-control-lg {
   align-items: center;
   justify-content: space-between;
 }
+
+.font-navbar {
+  font-family: 'Bebas Neue', cursive;
+  font-size: 1rem;
+}
+
 .navbar-brand {
   padding-top: var(--bs-navbar-brand-padding-y);
   padding-bottom: var(--bs-navbar-brand-padding-y);
