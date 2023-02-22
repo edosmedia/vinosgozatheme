@@ -97,9 +97,10 @@
   }
 }
 
-/* main {
-  height: calc(100vh - 329px);
-} */
+main {
+  /* height: calc(100vh - 329px); */
+  overflow: hidden;
+}
 
 .entry-content {
   margin-top: 0 !important;
