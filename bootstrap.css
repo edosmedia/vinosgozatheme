@@ -126,7 +126,7 @@ main {
 
 #jumbo {
   position: relative;
-  font-family: 'Libre Baskerville', serif;
+  font-family: 'Bebas Neue', cursive;
   padding-top: 100px;
   background-size: cover;
   width: 100% !important;
@@ -173,7 +173,7 @@ background: rgb(2,0,36);
 background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(215,171,114,1) 0%, rgba(164,110,80,1) 100%);
 }
 .vg-text-call-jumbo  {
-  font-family: 'Libre Franklin', sans-serif;
+font-family: 'Libre Baskerville', serif;
   font-size: 2.733vw !important;
 }
 .vg-footer {
