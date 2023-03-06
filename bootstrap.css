@@ -183,6 +183,12 @@ footer .widget-area {
   display: flex;
   flex-direction: row;
 } 
+
+footer .widget-area ul#menu-menu-1  {
+list-style-type: none !important;
+padding: 0 !important;
+}
+
 @media (max-width: 768px) {
   footer .widget-area {
       display: flex;
@@ -191,7 +197,7 @@ footer .widget-area {
 }
 
 .site-info {
-  padding: 48px 0px 117px 0px;
+  padding: 50px 0px 0px 0px;
 }
 .vg-footer .widget_block li {
  list-style: none;
