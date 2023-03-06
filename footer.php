@@ -17,6 +17,8 @@
 		<div class="site-info container">
 		<aside id="secondary" class="widget-area">
 		<?php dynamic_sidebar( 'footer' ); ?>
+		<?php dynamic_sidebar( 'footer-2' ); ?>
+		<?php dynamic_sidebar( 'footer-3' ); ?>
 		</aside>
 			<a href="<?php echo esc_url( __( 'https://vinosgoza', 'vinoszona' ) ); ?>">
 				<?php
