@@ -179,6 +179,17 @@ font-family: 'Libre Baskerville', serif;
 .vg-footer {
   background-color: var(--vg-footer-bg);
 }
+footer .widget-area {
+  display: flex;
+  flex-direction: row;
+} 
+@media (max-width: 768px) {
+  footer .widget-area {
+      display: flex;
+      flex-direction: column;
+    }
+}
+
 .site-info {
   padding: 48px 0px 117px 0px;
 }
