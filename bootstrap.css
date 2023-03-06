@@ -187,6 +187,7 @@ footer .widget-area {
 footer .widget-area ul#menu-menu-1  {
 list-style-type: none !important;
 padding: 0 !important;
+margin: 0 !important;
 }
 
 @media (max-width: 768px) {
